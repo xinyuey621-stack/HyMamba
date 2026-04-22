@@ -37,12 +37,12 @@ class NodeEmbedding_speed:
             walk_length = self.args.walk_length if self.args else 10
             p = self.args.p if self.args else 1.0
             q = self.args.q if self.args else 1.0
-            # if feat is None:
-            #     model0 = DNE_pretrain(self.graph, hidden_dim=embed_size)
-            # else:
-            #     model0 = DNE_pretrain(self.graph, feat=feat, hidden_dim=embed_size)
+            if feat is None:
+                 model0 = DNE_pretrain(self.graph, hidden_dim=embed_size)
+            else:
+                 model0 = DNE_pretrain(self.graph, feat=feat, hidden_dim=embed_size)
                     
-            # model0.pretrain_mamba()
+            model0.pretrain_mamba()
             
             if feat is None:
                 model = DNE(self.graph, hidden_dim=embed_size)
