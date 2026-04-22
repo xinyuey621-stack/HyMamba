@@ -1084,8 +1084,8 @@ class DNE_pretrain:
             x_pos_hyper = final_node_emb.detach().cpu().numpy()
         
         # 保存embedding
-        np.save(os.path.join(save_dir, "x_posMamb_cele.npy"), x_pos_node)
-        np.save(os.path.join(save_dir, "x_posHMamb_cele.npy"), x_pos_hyper)
+        np.save(os.path.join(save_dir, "x_posMamb_atha.npy"), x_pos_node)
+        np.save(os.path.join(save_dir, "x_posHMamb_atha.npy"), x_pos_hyper)
         
         # 保存模型
         torch.save(
