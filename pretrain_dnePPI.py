@@ -931,7 +931,7 @@ class DNE_pretrain:
     # ==============================
     def pretrain_mamba(self,
                                  num_pos_features: int = 256,
-                                 walk_len: int =6,
+                                 walk_len: int =10,
                                  num_walks_per_node: int = 6,
                                  epochs: int = 6,
                                  neg_ratio: int = 5,
